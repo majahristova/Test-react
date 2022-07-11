@@ -1,0 +1,39 @@
+
+
+  .Main{
+    width: 100%;
+    max-width: 1500px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Main-title{
+    width: 50%; 
+ 
+}
+
+.Text{
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 84px;
+    font-weight: 500;
+    min-height: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 20px;
+}
+
+
+.Main img
+{
+    object-fit: cover;
+    width: 50%;
+    display: flex;
+    max-width: 500px;
+    justify-content: center;
+
+}

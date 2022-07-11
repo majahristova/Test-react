@@ -1,0 +1,34 @@
+.Footer{
+    height: 500px;
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 150px;
+    display: flex;
+  align-items: center;
+  justify-content: center
+
+}
+
+.Footer-text{
+    display: flex;
+    list-style: none;
+    width: 20px;
+    text-decoration: none;
+    color: #173A56;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3rem;
+    align-items: center;
+    margin-right: 250px;
+}
+
+.Footer-contact {
+      list-style: none;
+         display: flex;
+        flex-direction: column;
+        column-gap: 10px ;
+        width: 100px;
+        height: 100px;
+        margin-top: 300px;
+}
