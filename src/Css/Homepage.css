@@ -3,37 +3,38 @@
   .Main{
     width: 100%;
     max-width: 1500px;
-    min-height: 150px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.Main-title{
-    width: 50%; 
- 
-}
 
-.Text{
+.Text h2 {
     color: black;
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 84px;
+    font-size: 50px;
     font-weight: 500;
-    min-height: 20px;
+    min-height: 50px;
     font-family: 'Poppins', sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+}
+.Text p {
+    color: black;
+    font-size: 15px;
+    font-weight: 150;
+    font-family: 'Poppins', sans-serif;
+   
 }
 
-
-.Main img
+.Homepageimg
 {
-    object-fit: cover;
-    width: 50%;
-    display: flex;
-    max-width: 500px;
-    justify-content: center;
-
+border-radius: 50%;
+width: 500px;
+min-height: 400px;
+display: flex;
+align-items: center;
 }

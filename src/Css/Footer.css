@@ -1,34 +1,45 @@
-.Footer{
-    height: 500px;
-    width: 100%;
-    margin-left: 30px;
-    margin-top: 150px;
-    display: flex;
+.footer {
+  display: flex;
+  top: 0;
+  height: 70px;
   align-items: center;
-  justify-content: center
-
+  margin: 0%;
+  width: 100%;
+  font-weight: bold;
+background-color:rgb(217, 255, 224);
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.Footer-text{
-    display: flex;
-    list-style: none;
-    width: 20px;
-    text-decoration: none;
-    color: #173A56;
-    font-size: 20px;
-    font-weight: bold;
+.footer-text{
+  color:rgb(92, 209, 141);
+  font-weight: bold;
+  display: flex;
+  width: 60%;
+  margin-left: 60px;
+  padding-left: 70px;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 3rem;
-    align-items: center;
-    margin-right: 250px;
 }
 
-.Footer-contact {
-      list-style: none;
-         display: flex;
-        flex-direction: column;
-        column-gap: 10px ;
-        width: 100px;
-        height: 100px;
-        margin-top: 300px;
+.footer-list {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
 }
+
+.footer-list ul {
+  display: flex;
+}
+
+.footer-list li {
+  font-weight: bold;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 20px;
+  color: rgb(92, 209, 141);
+  
+}
+

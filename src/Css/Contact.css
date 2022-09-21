@@ -1,0 +1,58 @@
+
+.Modalstyle{
+   width: 100%;
+   min-height: 600px;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+
+}
+.Modalinfo  {
+    width: 400px;
+    padding-bottom: 50px;
+   
+}
+
+.Form-container{
+    width: 400px;
+
+}
+
+
+.Form-container p {
+    font-family: 'Poppins', sans-serif;
+     color:  rgb(92, 209, 141);
+}
+
+.Form-container button{
+    padding: 15px;
+    border:none;
+    border-radius: 10%;
+   background-color: rgb(92, 209, 141);
+   text-align: center;
+}
+
+.Modalinfo h1{
+  color: rgb(92, 209, 141);
+  font-family: 'Poppins', sans-serif;
+}
+
+.openmodalbtn{
+    padding: 15px;
+    border:none;
+    border-radius: 10%;
+    background-color:rgb(217, 255, 224);
+   text-align: center;
+}
+.modalContainer {
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    width: 500px;
+    height: 300px;
+    z-index: 10;
+    background-color:rgb(217, 255, 224);
+    color: black;
+    text-align: center;
+}

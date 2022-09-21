@@ -1,34 +1,83 @@
-import React from 'react'
+import React, { useState } from 'react';
 
+import Modal from './Modal.js';
+import '../Css/Contact.css';
 
-function Contact () {
-    return (
-        <div className='Container'>
-  <p className='Labelname'> Name</p>
-  <input type="text" id="text_name" placeholder="Lägg till namn"/>
-  <p className='Labelemail'> Email</p>
-    <input type="text" id="text_email" placeholder="Lägg till email" />
-    <p className='Labelmessage'> Message</p>
-    <textarea id="Text_message" placeholder="Lägg till message" rows="4" cols="50"></textarea>
-    <button  onclick="testVariable()">Skicka in</button> <br />
-    <span id="Outputresult" name="outputresult" rows="4" cols="50"></span>
-  </div>
-  
-) }
-  
-function testVariable() {
-    var Confirmation ="Message sent!";
-    var Name = "Namn =";
-    var Email = "Email =";
-    var Message ="Message =";
-    
+function Contact() {
+  const [form, setForm] = React.useState({
+    name: '',
+    email: '',
+    message: '',
 
-      var strText = document.getElementById( "Text_name").value;          
-      var strText1 = document.getElementById("Text_email").value;
-      var strText2 = document.getElementById("Text_message").value;
-      var result = Confirmation + ' '  + "\n" +  Name +  ' ' + strText + "\n" + Email + ' ' + strText1  + "\n"+ Message + ' ' + strText2;
-      
-      document.getElementById('Outputresult').textContent= result;
-       
+  });
+
+  const [sended, setSended] = React.useState(false);
+
+  function changeFormdata(e) {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   }
- export default Contact
+  function sendInfomation() {
+    setSended(true);
+  }
+  console.log(sended);
+
+  return (
+    <div className="Form-container">
+      <p className="Labelname"> Name</p>
+      <input type="text" id="text_name" placeholder="Lägg till namn" value={form.name} onChange={changeFormdata} name="name" />
+      <p className="Labelemail"> Email</p>
+      <input type="text" id="text_email" placeholder="Lägg till email" value={form.email} onChange={changeFormdata} name="email" />
+      <p className="Labelmessage"> Message</p>
+      <textarea id="Text_message" placeholder="Lägg till message" rows="4" cols="50" value={form.message} onChange={changeFormdata} name="message" />
+      <button onClick={sendInfomation}>Skicka in</button>
+      {' '}
+      <br />
+      <div id="Outputresult" name="outputresult">
+        {
+
+          sended && (
+            <>
+              <p>
+                Name:
+                {form.name}
+              </p>
+              <p>
+                Email:
+                {form.email}
+              </p>
+              <p>
+                Message:
+                {form.message}
+              </p>
+            </>
+
+          )
+        }
+      </div>
+    </div>
+  );
+}
+
+function Modalapp() {
+  const [openModal, setOpenmodal] = useState(false);
+  function handleToggleModal() {
+    // false => false
+    setOpenmodal(!openModal);
+  }
+  return (
+
+    <div className="Modalstyle">
+      <Contact />
+      <div className="Modalinfo">
+        <h1>Hello! click on the button to book a call</h1>
+        <button className="openmodalbtn" onClick={handleToggleModal}>Click here</button>
+        {openModal && <Modal handleToggleModal={handleToggleModal} />}
+      </div>
+    </div>
+  );
+}
+
+export default Modalapp;

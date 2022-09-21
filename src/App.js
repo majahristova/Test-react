@@ -1,28 +1,27 @@
-import React  from "react";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Homepage from "./components/Homepage";
-import Footer from "./components/Footer";
-import Aboutpage from "./components/Aboutpage";
-import Contact from "./components/Contact";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import React from 'react';
+import './App.css';
+import {
+  BrowserRouter, Route, Routes, Outlet,
+} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Homepage from './components/Homepage';
+import Footer from './components/Footer';
+import Aboutpage from './components/Aboutpage';
+import Contact from './components/Contact';
+import Layout from './components/Layout';
 
-
-
-function App()  {
+function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar/>
-        <Homepage/>
-        <Routes>
-      <Route exact path="/" component={Homepage}/>
-     <Route exact path="/about" component={Aboutpage}/>
-     <Route exact path="/contact" component={Contact}/>
-     </Routes>
-      </div>
-      </BrowserRouter>
-        
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </div>
+
   );
 }
 

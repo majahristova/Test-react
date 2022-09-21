@@ -1,22 +1,23 @@
+import React from 'react';
+import '../Css/Footer.css';
 
-import React from 'react'
+function Footer() {
+  return (
+    <div className="footer">
+      <p className="footer-text">
+        {' '}
+        Maya-Fix
+      </p>
+      <ul className="footer-list">
+        <li>
+          Mail = maja.pau99@gmail.com
+        </li>
+        <li>
+          Github = majahristova
+        </li>
+      </ul>
+    </div>
+  );
+}
 
-
-function Footer () {
-    return (
-        <div className='Footer'>
-        <p className='Footer-text'> Maya-Fix</p>
-        <ul className='Footer-contact'>
-            <li>
-                About us</li>
-         <li>
-             Contact</li>
-     <li class>
-         Github = majahristova </li>     
-          </ul>
-            </div> 
-  
-) }
-  
- export default Footer
-
+export default Footer;
