@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
 import {
-  BrowserRouter, Route, Routes, Outlet,
+  Route, Routes,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
-import Footer from './components/Footer';
 import Aboutpage from './components/Aboutpage';
 import Contact from './components/Contact';
 import Layout from './components/Layout';

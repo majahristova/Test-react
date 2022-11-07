@@ -10,7 +10,8 @@ function Aboutpage() {
        Need a new website to your company or personal website?
       </h1>
       <p>
-        Maya-fix, creates smart and creative website in less than 1 week after requiest, prices are between 2 000 - 10 000 kr depending on what kind of website you wanna create.
+        Maya-fix, creates smart and creative website in less than 1 week after requiest, 
+        prices are between 2 000 - 10 000 kr depending on what kind of website you wanna create.
       </p>
       <div className="Aboutpage-img">
         <img src={Aboutpageimage1} className="Aboutimage1" alt="Main-page" />

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import Modal from './Modal.js';
+import Modal from './Modal';
 import '../Css/Contact.css';
 
 function Contact() {
@@ -32,7 +31,7 @@ function Contact() {
       <input type="text" id="text_email" placeholder="Lägg till email" value={form.email} onChange={changeFormdata} name="email" />
       <p className="Labelmessage"> Message</p>
       <textarea id="Text_message" placeholder="Lägg till message" rows="4" cols="50" value={form.message} onChange={changeFormdata} name="message" />
-      <button onClick={sendInfomation}>Skicka in</button>
+      <button type="button" onClick={sendInfomation}>Skicka in</button>
       {' '}
       <br />
       <div id="Outputresult" name="outputresult">
@@ -63,17 +62,17 @@ function Contact() {
 
 function Modalapp() {
   const [openModal, setOpenmodal] = useState(false);
-  function handleToggleModal() {
+  const handleToggleModal = () => {
     // false => false
     setOpenmodal(!openModal);
-  }
+  };
   return (
 
     <div className="Modalstyle">
       <Contact />
       <div className="Modalinfo">
         <h1>Hello! click on the button to book a call</h1>
-        <button className="openmodalbtn" onClick={handleToggleModal}>Click here</button>
+        <button type="button" className="openmodalbtn" onClick={handleToggleModal}>Click here</button>
         {openModal && <Modal handleToggleModal={handleToggleModal} />}
       </div>
     </div>
